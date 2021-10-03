@@ -1,4 +1,4 @@
-module a.a/a
+module a.a/goscripting
 
 go 1.17
 
