@@ -38,3 +38,11 @@ shebangとしてはわかりずらいが使えれば問題ない。
 1. `go install github.com/erning/gorun@latest` を実行。
 2. 即時実行したいgolangのソースコードの先頭行に`/// 2>/dev/null ; gorun "$0" "$@" ; exit $?`を記載。
 3. 権限を付与して呼び出し。
+
+## おまけ
+
+最新版のgolangのインストールをさっと実行したいとき
+```
+wget https://raw.githubusercontent.com/xcd0/go_compiler_install/master/install_lastest.sh && ./install_lastest.sh
+```
+でできるスクリプトを書いた。https://github.com/xcd0/go_compiler_install
