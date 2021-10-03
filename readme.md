@@ -13,12 +13,12 @@ golangはコンパイラ言語であるがコンパイルが非常に高速で�
 このため`chmod +x ./main.go; ./main.go`のような実行できない。
 この問題を解決する手段を探した。
 
-* [gomacro](https://github.com/cosmos72/gomacro)いう、
-参考:https://www.infoq.com/jp/news/2020/06/go-scripting-language/
-gomacroはライセンスがMPLでGPLに近いが、gomacroを組み込まず実行ファイルを使用するのみのため問題ない。
-gomacroは `gomacro FILENAME.go` `#!/usr/bin/env gomacro` のようなシェバングに対応してる。
-ただし標準のGo実装ではないため問題が発生することはあるらしい。
-という触れ込みだったが、実際に動かしてみるとHello World!が出力されなかった。
+* [gomacro](https://github.com/cosmos72/gomacro)  
+gomacroは `gomacro FILENAME.go` `#!/usr/bin/env gomacro` のようなシェバングに対応してる。  
+ただし標準のGo実装ではないため問題が発生することはあるらしい。  
+gomacroはライセンスがMPLでGPLに近いが、gomacroを組み込まず実行ファイルを使用するのみのため問題ない。  
+参考:https://www.infoq.com/jp/news/2020/06/go-scripting-language/  
+という触れ込みだったが、実際に動かしてみるとHello World!が出力されなかった。  
 とりあえず保留。
 
 * [gore](https://github.com/x-motemen/gore)というgolangのREPL実装もあるが、
@@ -28,7 +28,7 @@ gomacroは `gomacro FILENAME.go` `#!/usr/bin/env gomacro` のようなシェバ�
 とりあえず使ってみた感じこれが一番簡単に動いた。
 
 gorunであればファイル先頭行に `/// 2>/dev/null ; gorun "$0" "$@" ; exit $?` を書くことで、
-`chmox +x main.go; ./main.go`のように実行できた。
+`chmod +x main.go; ./main.go`のように実行できた。
 shebangとしてはわかりずらいが使えれば問題ない。
 
 
